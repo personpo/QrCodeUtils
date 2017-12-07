@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/capture_containter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <SurfaceView
+        android:id="@+id/capture_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="true"
+        android:fitsSystemWindows="true"/>
+
+    <RelativeLayout
+        android:id="@+id/top_mask"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_alignParentTop="true"
+        android:background="#50000000"/>
+
+    <RelativeLayout
+        android:id="@+id/capture_crop_layout"
+        android:layout_width="245dp"
+        android:layout_height="245dp"
+        android:layout_below="@+id/top_mask"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/code_frame_ic_type0"
+        android:contentDescription="@string/app_name">
+
+        <ImageView
+            android:id="@+id/capture_scan_line"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@drawable/code_xian_ic_type0"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/left_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_mask"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/top_mask"
+        android:layout_toLeftOf="@+id/capture_crop_layout"
+        android:background="#50000000"
+        android:contentDescription="@string/app_name"/>
+
+    <ImageView
+        android:id="@+id/right_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_mask"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/top_mask"
+        android:layout_toRightOf="@+id/capture_crop_layout"
+        android:background="#50000000"
+        android:contentDescription="@string/app_name"/>
+
+
+
+    <ImageView
+        android:id="@+id/bottom_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/capture_crop_layout"
+        android:background="#50000000"
+        android:contentDescription="@string/app_name"/>
+
+
+</RelativeLayout>
