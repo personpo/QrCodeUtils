@@ -29,5 +29,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     compile 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.4@aar'
     compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
-    implementation project(':QrCode-library')
+    compile 'com.atiao:qrcode:1.0'
+//    implementation project(':QrCode-library')
 }
