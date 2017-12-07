@@ -11,7 +11,6 @@ compile 'com.atiao:qrcode:1.0'
 布局文件添加com.qrcode.view.QrCodePreView自定义控件
 将控件传入
 ```java
-mQRPresenter.startCamera();
 mQRPresenter = new QRCodePresenter(mContext, mQrCodePreView, new QRCodePresenter.QrCodeAnalysisListener() {
             @Override
             public void result(String result) {
