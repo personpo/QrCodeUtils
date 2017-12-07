@@ -2,7 +2,7 @@
 # QrCodeUtils
 可能是东半球最难用的Android二维码扫描工具
 
-## 添加依赖
+## 使用
 ```java
 allprojects {
     repositories {
@@ -16,6 +16,18 @@ compile 'com.atiao:qrcode:1.0'
 
 ## 初始化
 布局文件添加com.qrcode.view.QrCodePreView自定义控件
+```java
+<com.qrcode.view.QrCodePreView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scanview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+ </com.qrcode.view.QrCodePreView>
+```
+
 将控件传入
 ```java
 mQRPresenter = new QRCodePresenter(mContext, mQrCodePreView, new QRCodePresenter.QrCodeAnalysisListener() {
