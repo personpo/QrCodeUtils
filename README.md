@@ -4,6 +4,13 @@
 
 ## 添加依赖
 ```java
+allprojects {
+    repositories {
+        maven { url "https://raw.githubusercontent.com/personpo/QrCodeUtils/master" }
+    }
+}
+
+
 compile 'com.atiao:qrcode:1.0'
 ```
 
